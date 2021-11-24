@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller 1-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="first" id="BYZ-38-t0r" userLabel="View Controller 1" customClass="ViewController1" customModule="M6" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Tlv-RC-cho">
+                                <rect key="frame" x="55" y="433" width="304" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="xKa-cE-YaJ"/>
+                                    <constraint firstAttribute="width" constant="300" id="zfh-Uc-MVQ"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderBar:" destination="BYZ-38-t0r" eventType="valueChanged" id="Piy-Mp-yGS"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Gj-I0-QEG">
+                                <rect key="frame" x="120" y="488" width="174" height="32"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Display Slider Value">
+                                    <fontDescription key="titleFontDescription" type="system" weight="heavy" pointSize="15"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="sliderButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3wN-Vs-XxB"/>
+                                    <segue destination="SD6-QP-D1i" kind="presentation" identifier="toModalView" id="cOR-om-eUR"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7km-lM-el8">
+                                <rect key="frame" x="57" y="362" width="300" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="hkM-4U-V95"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzF-BP-m1o">
+                                <rect key="frame" x="57" y="316" width="300" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="KZA-Iu-dp3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.089353927459999996" green="0.089353927459999996" blue="0.089353927459999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7km-lM-el8" firstAttribute="top" secondItem="nzF-BP-m1o" secondAttribute="bottom" constant="25" id="8tL-Mc-L8d"/>
+                            <constraint firstItem="Tlv-RC-cho" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ddb-Rl-g1R"/>
+                            <constraint firstItem="Tlv-RC-cho" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ya9-eX-npI"/>
+                            <constraint firstItem="2Gj-I0-QEG" firstAttribute="top" secondItem="Tlv-RC-cho" secondAttribute="bottom" constant="25" id="ZfO-D8-d0a"/>
+                            <constraint firstItem="nzF-BP-m1o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="enm-r1-98Y"/>
+                            <constraint firstItem="7km-lM-el8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xzn-c4-te9"/>
+                            <constraint firstItem="2Gj-I0-QEG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yN6-96-1XO"/>
+                            <constraint firstItem="Tlv-RC-cho" firstAttribute="top" secondItem="7km-lM-el8" secondAttribute="bottom" constant="50" id="zrc-yP-5X0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="X6M-Qk-wrj"/>
+                    <connections>
+                        <outlet property="errorMessage" destination="nzF-BP-m1o" id="3hi-T3-gjP"/>
+                        <outlet property="sliderNum" destination="Tlv-RC-cho" id="Jyk-n5-9XP"/>
+                        <outlet property="sliderValueInit" destination="Tlv-RC-cho" id="8tI-dt-XdH"/>
+                        <outlet property="sliderValueText" destination="7km-lM-el8" id="vK4-sT-jLS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2036" y="139"/>
+        </scene>
+        <!--View Controller 2-->
+        <scene sceneID="MHG-tP-G5T">
+            <objects>
+                <viewController storyboardIdentifier="second" id="gch-NS-y2F" userLabel="View Controller 2" customClass="ViewController2" customModule="M6" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XiY-s1-Alp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Slider Value: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBA-Ar-XOC">
+                                <rect key="frame" x="152" y="348.5" width="110" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rPc-hr-cKK">
+                                <rect key="frame" x="157" y="404" width="100" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="ULL-8E-oel"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="sliderTextChange:" destination="gch-NS-y2F" eventType="editingDidEnd" id="nmX-GG-2gl"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ta2-xv-o6T"/>
+                        <color key="backgroundColor" red="0.089353927459999996" green="0.089353927459999996" blue="0.089353927459999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="rPc-hr-cKK" firstAttribute="top" secondItem="fBA-Ar-XOC" secondAttribute="bottom" constant="35" id="AsV-W9-xAB"/>
+                            <constraint firstItem="rPc-hr-cKK" firstAttribute="centerY" secondItem="XiY-s1-Alp" secondAttribute="centerY" id="OBQ-je-dxQ"/>
+                            <constraint firstItem="rPc-hr-cKK" firstAttribute="centerX" secondItem="XiY-s1-Alp" secondAttribute="centerX" id="UiN-JM-xEE"/>
+                            <constraint firstItem="fBA-Ar-XOC" firstAttribute="centerX" secondItem="XiY-s1-Alp" secondAttribute="centerX" id="XJO-t8-2FC"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="YeP-qy-TSc" appends="YES" id="G51-H2-BgS"/>
+                        </connections>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Forester" id="eow-nI-6VP" userLabel="Navigation">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="iyq-bN-bta"/>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="ovX-sn-no6">
+                            <color key="tintColor" systemColor="systemBackgroundColor"/>
+                            <connections>
+                                <segue destination="LWu-ml-INv" kind="unwind" unwindAction="backButtonWithUnwindSegue:" id="tg2-vp-IGq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="sliderTextEntry" destination="rPc-hr-cKK" id="gF2-by-idl"/>
+                        <outlet property="sliderTextValue" destination="fBA-Ar-XOC" id="UuW-gK-onu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ThQ-Rl-D4p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="LWu-ml-INv" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="YeP-qy-TSc">
+                    <connections>
+                        <action selector="dismissKB:" destination="gch-NS-y2F" id="hjS-SY-vqa"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="3523.1884057971015" y="138.61607142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="epU-RX-Ig0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SD6-QP-D1i" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wSd-a9-ivN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gch-NS-y2F" kind="relationship" relationship="rootViewController" id="7aa-g7-djV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yjO-Xd-HQG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2774" y="139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
